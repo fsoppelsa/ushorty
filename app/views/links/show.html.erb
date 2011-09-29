@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= t(:copy_this_url) %></b>
+  <% 
+    @basepath = Rails.application.config.server_name[:host]
+  %>
+  <%= "http://"+@basepath+"/"+@link.hashed %>
+</p>
