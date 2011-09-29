@@ -1,4 +1,7 @@
+db/development.rb
+db/test.rb
+db/production.rb
+.bundle/
 log/
 vendor/
 tmp/
-.bundle/

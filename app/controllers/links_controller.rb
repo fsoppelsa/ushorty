@@ -1,25 +1,25 @@
 class LinksController < ApplicationController
   # GET /links
   # GET /links.json
-  def index
-    @links = Link.all
+  #def index
+  #  @links = Link.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @links }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html # index.html.erb
+  #    format.json { render :json => @links }
+  #  end
+  #end
 
   # GET /links/1
   # GET /links/1.json
-  def show
-    @link = Link.find(params[:id])
+  #def show
+  #  @link = Link.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @link }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html # show.html.erb
+  #    format.json { render :json => @link }
+  #  end
+  #end
 
   # GET /links/new
   # GET /links/new.json
@@ -33,15 +33,15 @@ class LinksController < ApplicationController
   end
 
   # GET /links/1/edit
-  def edit
-    @link = Link.find(params[:id])
-  end
+  #def edit
+  #  @link = Link.find(params[:id])
+  #end
 
   # POST /links
   # POST /links.json
   def create
     @link = Link.new(params[:link])
-    @link.hashed = create_hash(5)
+    @link.hashed = create_hash(6)
 
     respond_to do |format|
       if @link.save!
@@ -54,7 +54,7 @@ class LinksController < ApplicationController
 
   def redirect
     @link = params[:hashed]
-    redirect_to Link.find_by_hashed(@link).original
+    redirect_to Link.find_by_hashed(@link).last.original
   end
 
   # PUT /links/1
