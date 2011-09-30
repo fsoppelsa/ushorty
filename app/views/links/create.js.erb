@@ -1,7 +1,7 @@
 $('div#hashed').html("<p> \
     <%= t(:your_hashed) %> \
     <form name=\"hashed\"> \
-    <input type=\"text\" name=\"link\" value=\"<%= escape_javascript(@link.complete_hashed_url) %>\" onClick=\"select_all()\" /> \
+    <label></label><input type=\"text\" name=\"link\" value=\"<%= escape_javascript(@link.complete_hashed_url) %>\" onClick=\"select_all()\" /> \
     </form> \
     <%= t(:please_copy) %> \
     </p>").fadeIn('slow')
