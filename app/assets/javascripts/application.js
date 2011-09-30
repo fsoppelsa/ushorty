@@ -7,4 +7,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-= require textarea_select_all
+//= textarea_select_all.js
