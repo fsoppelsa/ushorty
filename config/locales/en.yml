@@ -2,3 +2,5 @@ en:
   original: "Full link"
   new_link: "Please insert your link to be shortened"
   copy_this_url: "This is your shortened link"
+  your_hashed: "Your hashed code is "
+  please_copy: " - please copy it and have fun"

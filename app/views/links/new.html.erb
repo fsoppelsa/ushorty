@@ -1,5 +1,19 @@
+<%= content_for :head do %>
+  <%= javascript_include_tag 'textarea_select_all.js' %>
+  <!--
+  <script type="text/javascript">
+      function select_all()
+      {
+        var text_val=eval("document.hashed.link");
+        text_val.focus();
+        text_val.select();
+      }
+  </script>
+  -->
+<% end %>
+
 <h1><%= t(:new_link) %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', links_path %>
+

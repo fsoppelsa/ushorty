@@ -1,0 +1,2 @@
+#page.replace_html('hashed', render(@link))
+$('div#hashed').html("<p><%= escape_javascript(@link.hashed) %></p>").append("<p><%= escape_javascript(@link.hashed) %></p>"); 

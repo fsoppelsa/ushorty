@@ -17,7 +17,6 @@ class LinksController < ApplicationController
 
   #  respond_to do |format|
   #    format.html # show.html.erb
-  #    format.json { render :json => @link }
   #  end
   #end
 
@@ -28,7 +27,6 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render :json => @link }
     end
   end
 
@@ -45,45 +43,50 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save!
-        format.html { redirect_to @link, :notice => 'Link was successfully created.' }
+        format.js
+        #format.html { redirect_to root_url }
+        #format.html { redirect_to @link }
       else
         format.html { render :action => "new" }
       end
     end
   end
 
+  # Redirects to the "long" url saved hashed
   def redirect
     @link = params[:hashed]
-    redirect_to Link.find_by_hashed(@link).last.original
+    # Redirects to the original URL: if collisions happen,
+    # old links (.last is taken) are overwritten
+    redirect_to Link.where("hashed = ?", @link).last.original
   end
 
   # PUT /links/1
   # PUT /links/1.json
-  def update
-    @link = Link.find(params[:id])
+  #def update
+  #  @link = Link.find(params[:id])
 
-    respond_to do |format|
-      if @link.update_attributes(params[:link])
-        format.html { redirect_to @link, :notice => 'Link was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.json { render :json => @link.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
+  #  respond_to do |format|
+  #    if @link.update_attributes(params[:link])
+  #      format.html { redirect_to @link, :notice => 'Link was successfully updated.' }
+  #      format.json { head :ok }
+  #    else
+  #      format.html { render :action => "edit" }
+  #      format.json { render :json => @link.errors, :status => :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /links/1
   # DELETE /links/1.json
-  def destroy
-    @link = Link.find(params[:id])
-    @link.destroy
+  #def destroy
+  #  @link = Link.find(params[:id])
+  #  @link.destroy
 
-    respond_to do |format|
-      format.html { redirect_to links_url }
-      format.json { head :ok }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html { redirect_to links_url }
+  #    format.json { head :ok }
+  #  end
+  #end
 
   private
 

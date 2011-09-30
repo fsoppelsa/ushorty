@@ -1,7 +1,7 @@
 Ushorty::Application.routes.draw do
   root :to => 'links#new'
 
-  resources :links, :exclude => [:index]
+  resources :links, :exclude => [:index, :show, :destroy]
   match '/:hashed' => 'links#redirect'
 
   # Sample of regular route:
