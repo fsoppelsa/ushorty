@@ -18,8 +18,6 @@ class LinksController < ApplicationController
     respond_to do |format|
       if @link.save!
         format.js
-        #format.html { redirect_to root_url }
-        #format.html { redirect_to @link }
       else
         format.html { render :action => "new" }
       end

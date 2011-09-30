@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :original %><br />
-    <%= f.text_field :original %>
+    <%= f.label t(:original_link) %> &mdash; 
+    <%= f.text_field :original, :size => 40 %>
   </div>
   <div class="actions">
-    <%= button_to "Shorten", :remote => true %>
+    <%= button_to t(:get_hashed), :remote => true %>
   </div>
   <div id="hashed">
   </div>
