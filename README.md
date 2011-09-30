@@ -3,7 +3,8 @@ Welcome to Ushorty
 
 Ushorty is a simple Rails 3.1 application which aim is to provide URL link
 shortening feature. Through its web interface you can shorten a long URL
-and get a twitterish new short URL. You type http://myco.co/y3Bds and you
+http://thelink.com/?variable=45&parameter=foo and get a twitterish new
+short URL http://myco.co/y3Bdzs. You type http://myco.co/y3Bdzs and you
 are redirected to your fancy http://thelink.com/?variable=45&parameter=foo
 
 Bug reports and feature requests:  
@@ -13,7 +14,8 @@ Getting started
 ===============
 
 Clone the project and edit config/environments/production.rb
-Find and modify the configuration directive
+
+Find and set the following configuration directive according to your ServerName
 
   # Host
   config.server_name = { :host => 'localhost:3000' }

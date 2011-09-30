@@ -1,6 +1,4 @@
-db/development.rb
-db/test.rb
-db/production.rb
+db/development.sqlite3
 .bundle/
 log/
 vendor/
