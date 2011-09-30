@@ -1,2 +1,2 @@
-bundle install --deployment
+bundle install --deployment --without test production
 rake db:migrate
