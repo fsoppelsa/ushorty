@@ -1,7 +1,9 @@
 $('div#hashed').html("<p> \
-    <%= t(:your_hashed) %> \
+    <%= t(:your_hashed) %> <strong><%= escape_javascript(@link.original) %></strong> <%= t(:is) %> \
     <form name=\"hashed\"> \
-    <label></label><input type=\"text\" name=\"link\" value=\"<%= escape_javascript(@link.complete_hashed_url) %>\" onClick=\"select_all()\" /> \
+    <input type=\"text\" name=\"link\" value=\"<%= escape_javascript(@link.complete_hashed_url) %>\"  onClick=\"select_all()\" /> \
     </form> \
     <%= t(:please_copy) %> \
-    </p>").fadeIn('slow')
+    </p>");
+$('div#button').fadeOut('fast');
+$('div#original').fadeOut('fast');

@@ -16,7 +16,8 @@ class LinksController < ApplicationController
     @link.hashed = create_hash(6)
 
     respond_to do |format|
-      if @link.save!
+      if (@link.save! and 
+        not (params[:original] =~ Rails.application.config.server_name[:host]))
         format.js
       else
         format.html { render :action => "new" }

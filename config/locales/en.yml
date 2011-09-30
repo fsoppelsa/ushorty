@@ -1,7 +1,8 @@
 en:
-  original_link: "Type in your URL"
+  original_link: "Paste here your URL"
   new_link: "Ushorty"
-  copy_this_url: "This is your shortened link"
-  your_hashed: "Your hashed code is "
+  copy_this_url: "Here is your shortened link"
+  your_hashed: "Your hashed code for url "
+  is: "is"
   please_copy: "Copy it (Control-C) and have fun"
   get_hashed: "Shorten URL!"
