@@ -7,4 +7,8 @@ class Link < ActiveRecord::Base
   def complete_hashed_url
     return "http://" + Rails.application.config.server_name[:host] + "/" + self.hashed
   end
+
+  def original_length
+    return self.original.length
+  end
 end

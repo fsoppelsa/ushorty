@@ -1,15 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 it:
-  original_link: "Incolla il tuo indirizzo"
-  new_link: "Ushorty"
-  copy_this_url: "Questo è il tuo link abbreviato"
-  your_hashed: "Il tuo link abbreviato per l'indirizzo "
-  is: "è"
-  please_copy: "Selezionalo & copialo (Control-C), buon divertimento!"
-  get_hashed: "Abbrevia URL!"
-  not_available_url: "L'indirizzo breve che hai cercato non esiste"
-  go_back: "Indietro"
-  released_under: "è distribuito secondo le condizioni della"
   bsd_license: "licenza BSD"
+  chars: " caratteri"
+  copy_this_url: "Questo è il tuo link abbreviato"
+  get_hashed: "Abbrevia URL!"
+  go_back: "Indietro"
+  is: "è"
+  new_link: "Ushorty"
+  not_available_url: "L'indirizzo breve che hai cercato non esiste"
+  original_link: "Incolla il tuo indirizzo"
+  please_copy: "Selezionalo & copialo (Control-C), buon divertimento!"
+  released_under: "è distribuito secondo le condizioni della"
+  your_hashed: "Il tuo link abbreviato per l'indirizzo "
