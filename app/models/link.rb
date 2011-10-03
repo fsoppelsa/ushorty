@@ -5,6 +5,6 @@ class Link < ActiveRecord::Base
   public
 
   def complete_hashed_url
-    return Rails.application.config.server_name[:host] + "/" + self.hashed
+    return "http://" + Rails.application.config.server_name[:host] + "/" + self.hashed
   end
 end
