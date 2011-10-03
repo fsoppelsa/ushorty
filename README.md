@@ -13,12 +13,12 @@ https://github.com/fsoppelsa/ushorty
 Getting started
 ===============
 
-Clone the project and edit config/environments/production.rb
+Clone the project and edit `config/environments/production.rb`
 
 Find and set the following configuration directive according to your ServerName
 
-  # Host
-  config.server_name = { :host => 'localhost:3000' }
+	# Host
+	config.server_name = { :host => 'localhost:3000' }
 
 New ideas
 ---------
