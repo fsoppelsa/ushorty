@@ -30,7 +30,12 @@ class LinksController < ApplicationController
     @link = params[:hashed]
     # Redirects to the original URL: if collisions happen,
     # old links (.last is taken) are overwritten
-    redirect_to Link.where("hashed = ?", @link).last.original
+    unless @redirection = Link.where("hashed = ?", @link).last
+      redirect_to error_page_path
+    else
+      # If hashed URL exists in database, redirect
+      redirect_to @redirection.original
+    end
   end
 
   private

@@ -6,3 +6,7 @@ en:
   is: "is"
   please_copy: "Select & copy it (Control-C) and have fun"
   get_hashed: "Shorten URL!"
+  not_available_url: "The shortened URL you provided is not available"
+  go_back: "Go back"
+  released_under: "is released under the terms of the"
+  bsd_license: "BSD license"
