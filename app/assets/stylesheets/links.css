@@ -7,8 +7,47 @@ body {
   text-align: center;
 }
 
+#browser_favourite {
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: right;
+}
+
 #container {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+#disclaimer_title {
+  margin-top: 50px;
+  font-size: 120%;
+}
+
+#disclaimer {
+  font-style: italic;
+  width: 400px;
+  margin: 0px auto;
+  text-align:left;
+  padding: 15px;
+  border: 1px dashed #CCC;
+  text-align: center;
+}
+
+#favourite_explanation {
+  font-style: italic;
+  font-size: 80%;
+  width: 250px;
+  margin: 0px auto;
+  margin-right: 50px;
+  text-align: right;
+}
+
+#footer {
+  padding-top: 50px;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto !important;
 }
 
 input {

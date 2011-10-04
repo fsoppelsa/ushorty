@@ -4,6 +4,7 @@ gem 'rails', '3.1.0'
 gem 'jquery-rails'
 gem 'capistrano'
 gem 'sprockets'
+gem 'whenever', :require => false
 
 group :development do
   gem 'sqlite3'

@@ -39,6 +39,7 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    chronic (0.6.4)
     erubis (2.7.0)
     highline (1.6.2)
     hike (1.2.1)
@@ -98,6 +99,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.30)
+    whenever (0.7.0)
+      activesupport (>= 2.3.4)
+      chronic (~> 0.6.3)
 
 PLATFORMS
   ruby
@@ -109,3 +113,4 @@ DEPENDENCIES
   rails (= 3.1.0)
   sprockets
   sqlite3
+  whenever

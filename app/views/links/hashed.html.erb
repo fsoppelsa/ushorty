@@ -1,0 +1,11 @@
+<div id="container">
+<p>
+    <%= t(:your_hashed) %> <strong><%= escape_javascript(@link.original) %></strong>
+    (<%= @link.original_length.to_s + t(:chars) %>)
+    <%= t(:is) %>
+    <form name="hashed">
+      <input type="text" name="link" value="<%= escape_javascript(@link.complete_hashed_url) %>" onClick="select_all()" />
+    </form>
+    <%= t(:please_copy) %>
+</p>
+</div>

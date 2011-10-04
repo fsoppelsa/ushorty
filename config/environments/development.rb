@@ -6,7 +6,7 @@ Ushorty::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  # Log error messages when you accidentally call methods on nil.
+  # Log error messages when WSURLyou accidentally call methods on nil.
   config.whiny_nils = true
 
   # Show full error reports and disable caching
@@ -26,11 +26,14 @@ Ushorty::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
   
   # Host
   config.server_name = { :host => 'localhost:3000' }
 
   # Hash length
   config.hash_length = 6
+
+  # Administrator's email
+  ActionMailer::Base.default :admin => 'Admin <yourname@yourdomain.com>'
 end

@@ -63,4 +63,7 @@ Ushorty::Application.configure do
 
   # Hash length
   config.hash_length = 6
+
+  # Administrator's email
+  ActionMailer::Base.default :admin => 'Admin <yourname@yourdomain.com>'
 end

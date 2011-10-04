@@ -2,6 +2,12 @@ en:
   bsd_license: "BSD license"
   chars: " characters"
   copy_this_url: "Here is your shortened link"
+  disclaimer_title: "Disclaimer"
+  disclaimer: " is a free service, but please don't abuse. Shortened links 
+                are created under your own responsibility. Links pointing 
+                to offensive contents will be removed"
+  favourite_explanation: "Drag and drop this link to your favourites toolbar
+                and use it to shorten your URLs. It's easy and fast!"
   get_hashed: "Shorten URL!"
   go_back: "Go back"
   is: "is"
