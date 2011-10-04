@@ -38,6 +38,10 @@ class LinksController < ApplicationController
     end
   end
 
+  def ws_url
+    logger.error(params[:url])
+  end
+
   private
 
   # Returns a n-length hash of mixed chars and numbers
