@@ -16,8 +16,9 @@ class LinksController < ApplicationController
     @link.hashed = create_hash(6)
 
     respond_to do |format|
-      if (@link.save! and 
-        not (params[:original] =~ Rails.application.config.server_name[:host]))
+      # Only if original is not recursive AND saved, prompt the hashed
+      if (not params[:original] =~ Rails.application.config.server_name[:host] and 
+          @link.save!)
         format.js
       else
         format.html { render :action => "new" }
