@@ -1,16 +1,13 @@
-<% if false %>
-<%= content_for :head do %>
-  <%= javascript_include_tag 'textarea_select_all.js' %>
-<% end %>
-<% end %>
+<%
+  @favo = "javascript:void(location.href='http://".to_s +
+  Rails.application.config.server_name[:host].to_s +
+  "/?myurl='+encodeURIComponent(location.href))".to_s 
+%>
 
 <div id="browser_favourite">
   <p>
-  <% @link = "javascript:void(location.href='http://"+
-    Rails.application.config.server_name[:host].to_s+
-    "/?myurl='+encodeURIComponent(location.href))" %>
   <%= image_tag "award.png" %>
-  <%= link_to Rails.application.config.server_name[:host].to_s, @link %>
+  <%= link_to Rails.application.config.server_name[:host].to_s, j(@favo) %>
   </p>
 </div>
 
