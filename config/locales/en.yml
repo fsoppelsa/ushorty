@@ -14,6 +14,7 @@ en:
   new_link: "Ushorty"
   not_available_url: "The shortened URL you provided is not available"
   original_link: "Paste here your URL"
+  provided_by: " is a service provided by"
   please_copy: "Select & copy it (Control-C) and have fun"
   released_under: "is released under the terms of the"
   your_hashed: "Your hashed code for URL "
