@@ -37,16 +37,22 @@ class LinkTest < ActiveSupport::TestCase
 #    assert link2.invalid?, "link2 #{link2.original.length}"
 #  end
 
-#  test "link must not contain basename" do
-#    hash_length = Rails.application.config.hash_length
-#    link1 = Link.new
-#    link1.original = "http://" + Rails.application.config.server_name[:host] + "/aa"
-#    hash_length.times do |i|
-#      link1.original += "a"
-#    end
-#    assert link1.invalid?, "link1 #{link1.original}"
-#
-#    link2 = Link.new
-#    link2.original = "http://www.google.com"
-#  end
+  test "link must not contain basename" do
+    hash_length = Rails.application.config.hash_length
+    server_name = Rails.application.config.server_name[:host]
+
+    link1 = Link.new
+    link1.original = "http://" + server_name + "/aa"
+    hash_length.times do |i|
+      link1.original += "a"
+    end
+    assert link1.invalid?, "link1 #{link1.original}"
+
+    link2 = Link.new
+    link2.original = "http://www.google.com/"
+    (server_name.length + hash_length).times do |i|
+      link2.original += "a"
+    end
+    assert link2.valid?, "link2 #{link2.original}"
+  end
 end
