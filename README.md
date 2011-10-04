@@ -15,10 +15,16 @@ Getting started
 
 Clone the project and edit `config/environments/production.rb`
 
-Find and set the following configuration directive according to your ServerName
+Find and set the following configuration directive according to your **ServerName**
 
 	# Host
 	config.server_name = { :host => 'localhost:3000' }
+
+If you want, you can specify the hash length as well (default 6 chars):
+
+	# Hash length
+	config.hash_length = 6
+
 
 New ideas
 ---------

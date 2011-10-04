@@ -13,12 +13,10 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = Link.new(params[:link])
-    @link.hashed = create_hash(6)
+    @link.hashed = create_hash(Rails.application.config.hash_length)
 
     respond_to do |format|
-      # Only if original is not recursive AND saved, prompt the hashed
-      if (not params[:original] =~ Rails.application.config.server_name[:host] and 
-          @link.save!)
+      if (not @link.original.include?(Rails.application.config.server_name[:host]) and @link.save)
         format.js
       else
         format.html { render :action => "new" }

@@ -60,4 +60,7 @@ Ushorty::Application.configure do
 
   # Host
   config.server_name = { :host => 'localhost:3000' }
+
+  # Hash length
+  config.hash_length = 6
 end
