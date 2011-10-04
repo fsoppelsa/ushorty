@@ -16,10 +16,12 @@ class LinksController < ApplicationController
     @link.hashed = create_hash(Rails.application.config.hash_length)
 
     respond_to do |format|
-      if (not @link.original.include?(Rails.application.config.server_name[:host]) and @link.save)
-        format.js
-      else
-        format.html { render :action => "new" }
+      unless @link.original.include?(Rails.application.config.server_name[:host])
+        if @link.save
+          format.js
+        else
+          format.html { render :action => "new" }
+        end
       end
     end
   end
