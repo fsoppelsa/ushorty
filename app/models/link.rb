@@ -10,6 +10,8 @@ class Link < ActiveRecord::Base
   validates_length_of :original, :minimum => @@minimum_length
   # ... must not be recursive
   validate :original_must_not_be_recursive
+  # ... no blast
+  validate :original_no_blast
   
   public
 
@@ -25,5 +27,14 @@ class Link < ActiveRecord::Base
 
   def original_must_not_be_recursive
     errors.add(:original, "recursive") if original.include?(Rails.application.config.server_name[:host].to_s)
+  end
+
+  # XXX
+  # Still doesn't check if from same IP source
+  def original_no_blast
+    seconds_of_delay = 10
+    @count = Link.where("original = ?", original).
+      where("created_at > ?", Time.now.ago(seconds_of_delay)).count
+    errors.add(:original, "blast") if @count > 0
   end
 end
