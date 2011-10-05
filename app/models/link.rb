@@ -37,4 +37,7 @@ class Link < ActiveRecord::Base
       where("created_at > ?", Time.now.ago(seconds_of_delay)).count
     errors.add(:original, "blast") if @count > 0
   end
+
+  def foo
+  end
 end
