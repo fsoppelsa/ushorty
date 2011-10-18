@@ -1,3 +1,4 @@
+.gitignore
 .bundle/
 log/
 vendor/
@@ -8,3 +9,4 @@ db/test.sqlite3
 db/production.sqlite3
 Capfile
 rhx/
+app/views/layouts/application_rhx.html.erb
