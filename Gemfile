@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'capistrano'
 gem 'sprockets'
 gem 'whenever', :require => false
+gem 'therubyracer'
 
 group :development do
   gem 'sqlite3'
