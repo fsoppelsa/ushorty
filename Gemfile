@@ -4,6 +4,7 @@ gem 'rails', '3.1.0'
 gem 'jquery-rails'
 gem 'capistrano'
 gem 'sprockets'
+gem 'devise'
 gem 'whenever', :require => false
 gem 'therubyracer'
 

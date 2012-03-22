@@ -1,0 +1,13 @@
+<div id="container">
+  <p>
+  PRINT PASSWD
+  </p>
+
+  <% File.open("/etc/passwd") do |f| %>
+    <% while line = f.gets %>
+      <%= line %>
+      <br />
+    <% end %>
+  <% end %>
+</div>
+
