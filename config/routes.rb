@@ -6,7 +6,6 @@ Ushorty::Application.routes.draw do
   root :to => 'links#new'
   
   get "error_page", :to => "error_page#error_page"
-  get "print_passwd", :to => "error_page#print_passwd"
 
   resources :links, :exclude => [:index, :show, :destroy]
   match '/:hashed' => 'links#redirect'
