@@ -6,6 +6,7 @@ gem 'capistrano'
 gem 'sprockets'
 gem 'devise'
 gem 'whenever', :require => false
+gem 'puma'
 gem 'therubyracer'
 
 group :development do
